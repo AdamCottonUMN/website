@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Adam Cotton</title>
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png">
+    <meta name="description" content="i make ai projects">
+    <script src="https://kit.fontawesome.com/abe3fca760.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/A Logo.png" class="logo" width="75" height="75">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <i class="fa-solid fa-house"></i>
+                <li><a href="projects.html">Projects</a></li>
+                <i class="fa-solid fa-wrench"></i>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Student/Developer</p>
+            <h1>Adam Cotton</h1>
+        </div>
+    </div>
+</div>
+<!--About me-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/generic image.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About me</h1>
+                <h4 class="bodytxt">My name is Adam Cotton, and I am a student at the University of Minnesota studying computer science. I aim to use AI, machine learning and deep learning to revolutionize software and create projects with real world impact and importance. I hope to take my ideas worldwide and help people all over the globe.</h4>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>JavaScript, HTML, CSS, Python, Lua, C++, C#</li>
+                        <li><span>UI/UX</span><br>Designing and maintaining website/app interfaces</li>
+                        <li><span>API</span><br>Proficiency in utilizing and integrating APIs in software development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Internship</span><br><strong>Jacobson/Rost</strong> 
+                            <br>&bull; Worked with data, automation, and web services to consult/create a marketing plan for TikTok pages managed by the company
+                        </li>
+                        <li><span>Independent Roblox Developer</span><br>
+                            &bull; Developed four fully completed games from scratch, garnering over 150,000 player visits.
+                            <br>&bull; Created custom in-game assets and scripting solutions to enhance user experience.
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-2027</span><br>University of Minnesota Computer Engineering Major</li>
+                        <li><span>2023</span><br>Harvard CS50 computer science summer course</li>
+                        <li><span>2023</span><br>Graduated from University School of Milwaukee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
+
+
+
